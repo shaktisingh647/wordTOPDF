@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { FaFileWord } from "react-icons/fa6";
 import axios from "axios";
 function Home() {
@@ -54,6 +54,11 @@ function Home() {
       }
     }
   };
+
+  useEffect(() => {
+    handleSubmit();
+  }, [])
+  
   return (
     <>
       <div className="max-w-screen-2xl mx-auto container px-6 py-3 md:px-40">
